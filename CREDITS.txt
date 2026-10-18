@@ -1,0 +1,26 @@
+Asset: jku-teichwerk-d-kuru.jpg
+Title: Johannes Kepler University Linz - bar Teichwerk-full PNr°1114.jpg
+Photographer and copyright holder: D-Kuru/Wikimedia Commons
+Photographed: 26 March 2024
+
+Source and original:
+https://commons.wikimedia.org/wiki/File:Johannes_Kepler_University_Linz_-_bar_Teichwerk-full_PNr%C2%B01114.jpg
+
+Author:
+https://commons.wikimedia.org/wiki/User:D-Kuru
+
+Licence: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
+
+This asset is the Wikimedia-provided 1280-pixel JPEG thumbnail. WIN Space
+displays it using a responsive CSS crop and a translucent green overlay.
+The photograph and this adapted visual presentation are provided under
+CC BY-SA 4.0. Preserve appropriate attribution, the licence link, and a
+description of changes when redistributing or adapting the image.
+
+This image licence is separate from the application's source-code licence.
+No endorsement by the photographer or Johannes Kepler University Linz is
+claimed. The source repository currently declares no open-source code licence.
+
+Source licence verified on 17 October 2026.
