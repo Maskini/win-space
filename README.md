@@ -23,7 +23,7 @@ Local automated tests cover scoring, team permissions, room ownership, result pu
 
 ## Project status
 
-In development. The public interface is available to explore; organiser sign-in is not yet enabled in the public app. Production authentication and complete event testing across separate devices remain in progress.
+Organisers sign in with a one-time email code. Complete event testing across separate devices is ongoing.
 
 This repository contains the public project page. The application source is maintained privately.
 
