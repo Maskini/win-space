@@ -16,8 +16,8 @@
   <meta name="twitter:description" content="A quick look at WIN Space: shared rooms, team quizzes and interactive event activities.">
   <link rel="canonical" href="https://maskini.github.io/win-space/demo/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/site.css?v=6c0980751593">
-  <script type="module" src="../assets/demo-player.js"></script>
+  <link rel="stylesheet" href="../assets/site.css?v=074cb7164482">
+  <script type="module" src="../assets/demo-player.js?v=29e4847697dd"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,11 +30,18 @@
         <p>A quick look at how it works.</p>
       </div>
       <div class="video-wrap"><div class="video-player" data-demo-player>
-    <video id="demo-video" controls playsinline preload="metadata" poster="../assets/demo-poster.jpg" aria-label="WIN Space demonstration" aria-describedby="video-description" tabindex="0">
+    <video id="demo-video" controls playsinline preload="metadata" poster="../assets/demo-cover.jpg" aria-label="WIN Space demonstration" aria-describedby="video-description" tabindex="0">
       <source src="../media/win-space-demo.mp4" type="video/mp4">
       <p>Your browser cannot play this video. <a href="../media/win-space-demo.mp4">Open the demo video</a>.</p>
     </video>
-    <button class="video-play" type="button" aria-label="Play the WIN Space demo" aria-controls="demo-video" hidden><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 4 13 8-13 8z" fill="currentColor" stroke="none"/></svg></button>
+    <button class="video-cover" type="button" aria-label="Play the WIN Space demo" aria-controls="demo-video" hidden>
+      <img class="video-cover-photo" src="../assets/demo-cover.jpg" alt="" width="1280" height="720" fetchpriority="high">
+      <span class="video-cover-shade" aria-hidden="true"></span>
+      <span class="video-cover-brand" aria-hidden="true"><strong>WIN</strong><span>SPACE</span></span>
+      <span class="video-duration" aria-hidden="true" hidden></span>
+      <span class="video-play" aria-hidden="true"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 4 13 8-13 8z" fill="currentColor" stroke="none"/></svg></span>
+      <span class="video-cover-caption" aria-hidden="true">A little friendly rivalry.</span>
+    </button>
   </div>
   <p id="video-description" class="visually-hidden">A demonstration of joining rooms, team quizzes, live polls, Campus Guessr and moderator-controlled results. The video contains music and on-screen text, with no spoken dialogue.</p>
   <p class="video-error" role="status" hidden>Unable to play the video. <a href="../media/win-space-demo.mp4">Open the video directly</a>.</p></div>

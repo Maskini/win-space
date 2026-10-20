@@ -7,6 +7,6 @@ export const site = {
   demo: {
     src: 'media/win-space-demo.mp4',
     type: 'video/mp4',
-    poster: 'assets/demo-poster.jpg',
+    poster: 'assets/demo-cover.jpg',
   },
 };

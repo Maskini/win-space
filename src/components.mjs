@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
 const styleVersion = createHash('sha256').update(readFileSync(new URL('../assets/site.css', import.meta.url))).digest('hex').slice(0, 12);
+const playerVersion = createHash('sha256').update(readFileSync(new URL('../assets/demo-player.js', import.meta.url))).digest('hex').slice(0, 12);
 
 export const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
@@ -50,7 +51,14 @@ export function DemoPlayer(base) {
       <source src="${source}" type="${escape(site.demo.type)}">
       <p>Your browser cannot play this video. <a href="${source}">Open the demo video</a>.</p>
     </video>
-    <button class="video-play" type="button" aria-label="Play the WIN Space demo" aria-controls="demo-video" hidden>${Icon('play')}</button>
+    <button class="video-cover" type="button" aria-label="Play the WIN Space demo" aria-controls="demo-video" hidden>
+      <img class="video-cover-photo" src="${poster}" alt="" width="1280" height="720" fetchpriority="high">
+      <span class="video-cover-shade" aria-hidden="true"></span>
+      <span class="video-cover-brand" aria-hidden="true"><strong>WIN</strong><span>SPACE</span></span>
+      <span class="video-duration" aria-hidden="true" hidden></span>
+      <span class="video-play" aria-hidden="true">${Icon('play')}</span>
+      <span class="video-cover-caption" aria-hidden="true">A little friendly rivalry.</span>
+    </button>
   </div>
   <p id="video-description" class="visually-hidden">A demonstration of joining rooms, team quizzes, live polls, Campus Guessr and moderator-controlled results. The video contains music and on-screen text, with no spoken dialogue.</p>
   <p class="video-error" role="status" hidden>Unable to play the video. <a href="${source}">Open the video directly</a>.</p>`;
@@ -77,7 +85,7 @@ export function Document({ title, description, base, route, content, demo = fals
   <link rel="canonical" href="${canonical}">
   <link rel="icon" href="${base}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${base}assets/site.css?v=${styleVersion}">
-${demo ? `  <script type="module" src="${base}assets/demo-player.js"></script>` : ''}
+${demo ? `  <script type="module" src="${base}assets/demo-player.js?v=${playerVersion}"></script>` : ''}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

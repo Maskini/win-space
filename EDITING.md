@@ -12,6 +12,6 @@ Replace `media/win-space-demo.mp4` with your new MP4 recording. Keep the filenam
 For a different filename or an externally hosted video, update `demo.src` in `site.config.mjs` and run `npm run build`.
 The source is resolved relative to the project page, including on GitHub Pages.
 For best compatibility, export an H.264 MP4 with AAC audio and web-optimized/fast-start metadata.
-Replace `assets/demo-poster.jpg` to update the still shown before playback.
+Replace `assets/demo-cover.jpg` to update the still shown before playback. The cover title and wordmark are real text in `DemoPlayer` in `src/components.mjs`; the play button and duration are interactive interface elements, not part of the image.
 
 The player never autoplays. It supports the central play button, native playback controls and inline mobile playback.
