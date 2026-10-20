@@ -12,9 +12,17 @@ export function Icon(name, className = '') {
     arrow: '<path d="M5 19 19 5M5 5h14v14"/>',
     back: '<path d="m10 5-7 7 7 7M3 12h18"/>',
     playCircle: '<circle cx="12" cy="12" r="10"/><path d="m10 7 7 5-7 5z" fill="currentColor" stroke="none"/>',
-    play: '<path d="M6 4 18 12 6 20Z" fill="currentColor" stroke="none"/>',
   };
   return `<svg class="icon ${className}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]}</svg>`;
+}
+
+export function VideoPlayIcon() {
+  // One coordinate system keeps the visible triangle and both rings centered at 42, 42.
+  return `<svg class="video-play" viewBox="0 0 84 84" aria-hidden="true" focusable="false">
+    <circle class="video-play-halo" cx="42" cy="42" r="41"/>
+    <circle class="video-play-disc" cx="42" cy="42" r="33.5"/>
+    <path class="video-play-triangle" d="M36 34 48 42 36 50Z" fill="#fff"/>
+  </svg>`;
 }
 
 // Preserve the existing site's stacked wordmark and its proportions.
@@ -56,7 +64,7 @@ export function DemoPlayer(base) {
       <span class="video-cover-shade" aria-hidden="true"></span>
       <span class="video-cover-brand" aria-hidden="true"><strong>WIN</strong><span>SPACE</span></span>
       <span class="video-duration" aria-hidden="true" hidden></span>
-      <span class="video-play" aria-hidden="true">${Icon('play')}</span>
+      ${VideoPlayIcon()}
       <span class="video-cover-caption" aria-hidden="true">A little friendly rivalry.</span>
     </button>
   </div>
