@@ -3,58 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d7350">
   <title>WIN Space — Interactive Event Platform</title>
-  <meta name="description" content="Make every answer count. Explore the WIN Space prototype for team quizzes, polls and shared activities.">
+  <meta name="description" content="Make every answer count. Quizzes, votes and friendly competition. One place to bring your people together.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WIN Space">
   <meta property="og:title" content="WIN Space — Interactive Event Platform">
-  <meta property="og:description" content="Make every answer count. Explore the WIN Space prototype for team quizzes, polls and shared activities.">
+  <meta property="og:description" content="Make every answer count. Quizzes, votes and friendly competition. One place to bring your people together.">
   <meta property="og:url" content="https://maskini.github.io/win-space/">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="WIN Space — Interactive Event Platform">
-  <meta name="twitter:description" content="Team quizzes, polls and shared activities. Explore the prototype.">
+  <meta name="twitter:description" content="Make every answer count. Quizzes, votes and friendly competition. One place to bring your people together.">
   <link rel="canonical" href="https://maskini.github.io/win-space/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <style>
-    :root{color-scheme:light;--green:#1c7652;--dark:#154f39;--paper:#f4f5f0;--ink:#22392f;--muted:#5e6c63}
-    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
-    a{color:inherit}header,main,footer{max-width:1160px;margin:auto;padding-left:48px;padding-right:48px}
-    header{padding-top:36px;padding-bottom:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .logo{display:inline-flex;flex-direction:column;align-items:center;color:var(--green);text-decoration:none;width:82px}
-    .logo strong{font-size:42px;line-height:.9;letter-spacing:-2px;font-weight:900}.logo span{font-size:11px;letter-spacing:4px;margin-left:4px;margin-top:7px;font-weight:700}
-    .status{font-size:12px;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
-    main{padding-top:28px;padding-bottom:60px}.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
-    .eyebrow{font-size:12px;line-height:1.7;letter-spacing:2px;font-weight:700;color:var(--green);margin:0 0 24px}
-    h1{font-size:clamp(44px,5.4vw,68px);line-height:1.02;letter-spacing:-3px;margin:0 0 24px;font-weight:750;color:var(--green)}
-    .intro{font-size:19px;line-height:1.65;color:var(--muted);max-width:420px;margin:0 0 30px}
-    .cta{display:inline-flex;align-items:center;gap:34px;background:var(--green);color:#fff;padding:19px 25px;text-decoration:none;font-size:16px;font-weight:700;transition:background .15s}
-    .cta:hover{background:var(--dark)}a:focus-visible{outline:3px solid #d39d36;outline-offset:5px}.arrow{font-size:24px;line-height:1}
-    figure{margin:0;border:1px solid #d8e0d9;background:#fff;box-shadow:14px 16px 0 #e4ebe2;overflow:hidden}
-    .browser-bar{height:29px;border-bottom:1px solid #e4e8e2;display:flex;align-items:center;gap:5px;padding-left:13px}
-    .browser-bar i{width:5px;height:5px;background:#b3c4b8;border-radius:50%}
-    .screen{height:450px;overflow:hidden;position:relative}.screen img{display:block;width:100%;height:auto}.screen:after{content:"";position:absolute;inset:auto 0 0;height:52px;background:linear-gradient(transparent,#fff)}
-    figcaption{padding:14px 18px;font-size:11px;color:var(--muted);border-top:1px solid #e4e8e2;letter-spacing:.4px}
-    .details{display:flex;gap:20px;justify-content:space-between;border-top:1px solid #d3ddd4;margin-top:62px;padding-top:25px;font-size:13px;color:var(--muted)}
-    .details span{display:block}.details b{color:var(--green);display:block;margin-bottom:7px;font-size:14px}
-    footer{font-size:11px;color:var(--muted);padding-top:22px;padding-bottom:26px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid #d3ddd4}
-    @media(max-width:760px){header,main,footer{padding-left:24px;padding-right:24px}header{padding-top:28px}main{padding-top:24px}.hero{grid-template-columns:1fr;gap:40px}h1{letter-spacing:-2px;font-size:55px}.intro{font-size:18px}.screen{height:380px}.details{margin-top:44px;flex-wrap:wrap;row-gap:24px}.details>span{flex:1 1 40%}footer{flex-wrap:wrap}.status{font-size:10px}figure{box-shadow:8px 9px 0 #e4ebe2}}
-    @media(prefers-reduced-motion:reduce){.cta{transition:none}}
-  </style>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/site.css">
+
 </head>
 <body>
-  <header><a class="logo" href="./" aria-label="WIN Space home"><strong>WIN</strong><span>SPACE</span></a><span class="status">Interactive event platform</span></header>
-  <main>
-    <section class="hero" aria-labelledby="title">
-      <div>
-        <p class="eyebrow">YOUR GATHERING. YOUR RULES.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header page-shell inset"><a class="logo" href="./" aria-label="WIN Space home"><strong>WIN</strong><span>SPACE</span></a><span class="platform-label">Interactive event platform</span></header>
+  <main id="main" class="page-shell home-page">
+    <section class="hero inset" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="eyebrow">Your gathering. Your rules.</p>
         <h1 id="title">Make every<br>answer count.</h1>
         <p class="intro">Quizzes, votes and friendly competition. One place to bring your people together.</p>
-        <a class="cta" href="https://app.win-space.workers.dev/">Open WIN Space <span class="arrow" aria-hidden="true">↗</span></a>
+        <div class="hero-actions">
+          <a class="button" href="https://app.win-space.workers.dev/">Open WIN Space <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+          <a class="watch-link" href="./demo/"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 7 7 5-7 5z" fill="currentColor" stroke="none"/></svg><span>Watch the demo</span></a>
+        </div>
       </div>
-      <figure><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="screen"><img src="app-preview.png" alt="The WIN Space homepage, with room-code entry and activity selection." width="1280" height="1382"></div><figcaption>A look inside WIN Space</figcaption></figure>
+      <figure class="app-frame">
+        <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="app-screen"><img src="./app-preview.png" alt="The WIN Space homepage, with room-code entry and activity selection." width="810" height="1615" fetchpriority="high"></div>
+        <figcaption>A look inside WIN Space</figcaption>
+      </figure>
     </section>
-    <div class="details" aria-label="Project focus"><span><b>Join from your phone</b>A shared room. Your own device.</span><span><b>Play together</b>Teams, quizzes and shared activities.</span><span><b>Organiser-led</b>Rooms, scoring and result review.</span></div>
+    <section class="features inset" aria-label="The WIN Space experience">
+    <div><h2>Join from your phone</h2><p>A shared room. Your own device.</p></div>
+    <div><h2>Play together</h2><p>Teams, quizzes and shared activities.</p></div>
+    <div><h2>Organiser-led</h2><p>Rooms, scoring and result review.</p></div>
+  </section>
   </main>
-  <footer><span>WIN Space · Copyright 2026</span><a href="https://app.win-space.workers.dev/credits">Photo credits</a></footer>
+  <footer class="site-footer page-shell"><span>WIN Space · Copyright 2026</span><a href="https://app.win-space.workers.dev/credits">Photo credits</a></footer>
 </body>
 </html>

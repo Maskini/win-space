@@ -1,0 +1,9 @@
+{
+  "name": "win-space-project-page",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/components.mjs && node --check src/pages.mjs && node --check assets/demo-player.js && node --check scripts/build.mjs"
+  }
+}
