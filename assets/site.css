@@ -61,7 +61,7 @@ figcaption { padding: 14px 18px; border-top: 1px solid #e2e7e1; font-size: 11px;
 .video-cover-brand > span { font-size: 8px; font-weight: 700; letter-spacing: 3px; margin: 6px 0 0 3px; }
 .video-duration { position: absolute; top: 28px; right: 32px; padding: 6px 9px; background: #082b22b8; border: 1px solid #ffffff40; font-size: 12px; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: .5px; border-radius: 3px; }
 .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; display: grid; place-items: center; border: 1px solid #ffffffb3; border-radius: 50%; background: #073f30c9; color: #fff; box-shadow: 0 4px 24px #001c2340, 0 0 0 7px #ffffff17; backdrop-filter: blur(8px); transition: background .18s ease, box-shadow .18s ease; }
-.video-play .icon { width: 25px; height: 25px; margin-left: 3px; }
+.video-play .icon { width: 25px; height: 25px; }
 .video-cover:hover .video-play, .video-cover:focus-visible .video-play { background: var(--green); box-shadow: 0 4px 24px #001c2340, 0 0 0 9px #ffffff29; }
 .video-cover:focus-visible { outline: 3px solid var(--green); outline-offset: 6px; }
 .video-cover-caption { position: absolute; left: 32px; right: 32px; bottom: 28px; font-size: clamp(22px, 3.2vw, 36px); line-height: 1.12; letter-spacing: -.9px; font-weight: 700; text-wrap: balance; }
