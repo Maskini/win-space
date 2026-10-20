@@ -1,4 +1,8 @@
 import { site } from '../site.config.mjs';
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+
+const styleVersion = createHash('sha256').update(readFileSync(new URL('../assets/site.css', import.meta.url))).digest('hex').slice(0, 12);
 
 export const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
@@ -72,7 +76,7 @@ export function Document({ title, description, base, route, content, demo = fals
   <meta name="twitter:description" content="${escape(description)}">
   <link rel="canonical" href="${canonical}">
   <link rel="icon" href="${base}favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="${base}assets/site.css">
+  <link rel="stylesheet" href="${base}assets/site.css?v=${styleVersion}">
 ${demo ? `  <script type="module" src="${base}assets/demo-player.js"></script>` : ''}
 </head>
 <body>
