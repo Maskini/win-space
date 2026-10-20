@@ -17,11 +17,16 @@ export function Icon(name, className = '') {
 }
 
 export function VideoPlayIcon() {
-  // One coordinate system keeps the visible triangle and both rings centered at 42, 42.
+  const center = 42;
+  const radius = 10;
+  const left = center - radius / 2;
+  const halfHeight = radius * Math.sqrt(3) / 2;
+  // An equilateral triangle shares its centroid and circumcenter with the circle.
+  // Its bounding box is intentionally asymmetric around that shared center.
   return `<svg class="video-play" viewBox="0 0 84 84" aria-hidden="true" focusable="false">
-    <circle class="video-play-halo" cx="42" cy="42" r="41"/>
-    <circle class="video-play-disc" cx="42" cy="42" r="33.5"/>
-    <path class="video-play-triangle" d="M36 34 48 42 36 50Z" fill="#fff"/>
+    <circle class="video-play-halo" cx="${center}" cy="${center}" r="41"/>
+    <circle class="video-play-disc" cx="${center}" cy="${center}" r="33.5"/>
+    <path class="video-play-triangle" d="M${left} ${center - halfHeight} ${center + radius} ${center} ${left} ${center + halfHeight}Z" fill="#fff"/>
   </svg>`;
 }
 
